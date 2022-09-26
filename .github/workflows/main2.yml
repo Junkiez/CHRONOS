@@ -4,7 +4,9 @@ name: First Cron Job
 
        # Controls when the workflow will run
 on:
-  # Triggers the workflow every 5 minutes
+  push:
+    branches:
+      - main
   schedule:
     - cron: "*/1 * * * *"
 
