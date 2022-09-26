@@ -2,7 +2,7 @@
 fonttools==4.37.3
 kiwisolver==1.4.4
 matplotlib==3.5.3
-numpy==1.21.6
+numpy==1.22.0
 packaging==21.3
 Pillow==9.2.0
 pybase64==1.2.3
