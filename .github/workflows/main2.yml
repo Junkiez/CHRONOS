@@ -24,6 +24,12 @@ jobs:
         run: sudo apt install python3
         
       - name: Install dependencies
+        run: git clone https://github.com/Junkiez/CHRONOS.git
+        
+      - name: Install dependencies
+        run: cd CHRONOS
+    
+      - name: Install dependencies
         run: pip install -r requirements.txt
         
       - name: Run update script
