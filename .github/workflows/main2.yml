@@ -27,7 +27,7 @@ jobs:
         run: git clone https://github.com/Junkiez/CHRONOS.git
         
       - name: Install dependencies
-        run: cd CHRONOS
+        run: cd /CHRONOS
     
       - name: Install dependencies
         run: pip install -r requirements.txt
