@@ -6,6 +6,7 @@ import io
 import base64
 import redis
 import time
+import sys
 
 
 
@@ -29,11 +30,9 @@ fields = [
 
 
 r = redis.Redis(
-    host='redis-15589.c267.us-east-1-4.ec2.cloud.redislabs.com',
-    port=15589, 
-    password='IMNsVUEYDVsah2OlxEplqM7CIjbNJiwD')
-
-        #url: 'redis://default:IMNsVUEYDVsah2OlxEplqM7CIjbNJiwD@redis-15589.c267.us-east-1-4.ec2.cloud.redislabs.com:15589',
+    host=sys.argv[3],
+    port=int(sys.argv[2]), 
+    password=sys.argv[1])
 
 
 url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd'
