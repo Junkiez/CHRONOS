@@ -23,4 +23,8 @@ jobs:
         run: pip install -r CHRONOS/requirements.txt
         
       - name: Run update script
-        run: python CHRONOS/main.py ${{ secrets.PASSWORD }} ${{ secrets.PORT }} ${{ secrets.HOST }}
+        env: 
+          PASSWORD: ${{ secrets.PASSWORD }}
+          PORT: ${{ secrets.PORT }}
+          HOST: ${{ secrets.HOST }}
+        run: python CHRONOS/main.py env.PASSWORD env.PORT env.HOST
