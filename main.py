@@ -29,9 +29,10 @@ fields = [
 ]
 
 
+print(sys.argv[3],sys.argv[2],sys.argv[1])
 r = redis.Redis(
     host=sys.argv[3],
-    port=int(sys.argv[2]), 
+    port=sys.argv[2], 
     password=sys.argv[1])
 
 
