@@ -6,8 +6,6 @@ import io
 import base64
 import redis
 import time
-import sys
-
 
 
 fields = [
