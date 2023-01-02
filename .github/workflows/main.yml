@@ -27,4 +27,4 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.PORT }}
           HOST: ${{ secrets.HOST }}
-        run: python CHRONOS/main.py env.PASSWORD env.PORT env.HOST
+        run: python CHRONOS/main.py 
