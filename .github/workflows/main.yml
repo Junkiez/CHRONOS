@@ -20,11 +20,11 @@ jobs:
         run: sudo apt install python3
     
       - name: Install dependencies
-        run: pip install -r CHRONOS/requirements.txt
+        run: pip install -r requirements.txt
         
       - name: Run update script
         env: 
           PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.PORT }}
           HOST: ${{ secrets.HOST }}
-        run: python CHRONOS/main.py 
+        run: python main.py 
