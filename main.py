@@ -28,12 +28,10 @@ fields = [
     "last_updated",
 ]
 
-
-print(sys.argv[3],sys.argv[2],sys.argv[1])
 r = redis.Redis(
-    host=sys.argv[3],
-    port=sys.argv[2], 
-    password=sys.argv[1])
+    host=os.getenv('HOST'),
+    port=os.getenv('PORT'), 
+    password=os.getenv('PASSWORD'))
 
 
 url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd'
@@ -45,7 +43,7 @@ for i in fields:
     for j in range(100):
         data[j].pop(i)
         
-for j in range(100):
+for j in range(1):
     s = io.BytesIO()
 
 
