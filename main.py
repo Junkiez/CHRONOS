@@ -41,9 +41,8 @@ for i in fields:
     for j in range(100):
         data[j].pop(i)
         
-for j in range(1):
+for j in range(100):
     s = io.BytesIO()
-
 
     url = 'https://api.coingecko.com/api/v3/coins/'+data[j]['id']+'/market_chart?vs_currency=usd&ids=bitcoin&days=7'
     contents = urllib.request.urlopen(url).read()
@@ -78,5 +77,3 @@ for j in range(1):
     
 
 r.set('markets', json.dumps(data))
-
-#print(json.dumps(data))
