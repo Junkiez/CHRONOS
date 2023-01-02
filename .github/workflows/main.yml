@@ -3,6 +3,9 @@ name: Update Cron Job
 on:
   schedule:
     - cron: "*/60 */24 * * *"
+  push:
+      branches:
+        - 'main'
 
 jobs:
   cron:
