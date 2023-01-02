@@ -13,18 +13,11 @@ jobs:
     
     steps:
     
-      - name: Test
+      - name: Use repo
         uses: actions/checkout@v3
-      - run: ls ${{ github.workspace }}
     
       - name: Install python
         run: sudo apt install python3
-        
-      - name: Install dependencies
-        run: git clone https://github.com/Junkiez/CHRONOS.git
-        
-      - name: Install dependencies
-        run: ls
     
       - name: Install dependencies
         run: pip install -r CHRONOS/requirements.txt
